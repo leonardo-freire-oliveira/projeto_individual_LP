@@ -291,6 +291,9 @@ public class Projeto_Leonardo extends javax.swing.JFrame {
     Integer medidormemoria = 0;
     Integer totalmemoria = 0;
     
+    //Professora, depois que eu executo o meu codigo e aperto o botão da ação, meu design da tela está sendo modificado...
+    //nao consegui corrigir infelizmente :( 
+    
     private void btnMonitorarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMonitorarActionPerformed
 
         Random cpu = new Random();// criando variavel para numero randomico
@@ -301,11 +304,11 @@ public class Projeto_Leonardo extends javax.swing.JFrame {
         lblMedCPU.setText(String.format("%d",cpunumero));// exibir a media na label "lblMedCPU"
         lblMinCPU.setText((numeromincpu)+ "%");// exibir o minimo na label "lblMinCPU"
         lblMaxCPU.setText((numeromaxcpu)+ "%");// exibir o maximo na label "lblMaxCPU"
-        pgbCPU.setValue(cpunumero);// definir ate onde vai a barra de progresso de acordo com o numero randomico gerado
-        pgbCPU.setStringPainted(true);// permite eu inserir uma string dentro da barra de progresso "pgb"
         lblMinCPU.setForeground(Color.red);// cor das labels
         lblMaxCPU.setForeground(Color.green);// cor das labels
         lblMedCPU.setForeground(Color.blue);// cor das labels
+        pgbCPU.setValue(cpunumero);// definir ate onde vai a barra de progresso de acordo com o numero randomico gerado
+        pgbCPU.setStringPainted(true);// permite eu inserir uma string dentro da barra de progresso "pgb"
         
         if(cpunumero > numeromaxcpu){ //se o numero gerado no aleatorio for maior que o numero maximo
             numeromaxcpu = cpunumero; // substituir o numero maximo pelo numero gerado na nova ação
@@ -326,11 +329,11 @@ public class Projeto_Leonardo extends javax.swing.JFrame {
         lblMedDisco.setText(String.format("%d",disconumero));
         lblMinDisco.setText((numeromindisco)+ "%");
         lblMaxDisco.setText((numeromaxdisco)+ "%");
-        pgbDisco.setValue(disconumero);
-        pgbDisco.setStringPainted(true);
         lblMinDisco.setForeground(Color.red);
         lblMaxDisco.setForeground(Color.green);
         lblMedDisco.setForeground(Color.blue);
+        pgbDisco.setValue(disconumero);
+        pgbDisco.setStringPainted(true);
         
         if(disconumero > numeromaxdisco){
             numeromaxdisco = disconumero;
@@ -351,11 +354,11 @@ public class Projeto_Leonardo extends javax.swing.JFrame {
         lblMedMemoria.setText(String.format("%d",memorianumero));
         lblMinMemoria.setText((numerominmemoria)+ "%");
         lblMaxMemoria.setText((numeromaxmemoria)+ "%");
-        pgbMemoria.setValue(memorianumero);
-        pgbMemoria.setStringPainted(true);
         lblMinMemoria.setForeground(Color.red);
         lblMaxMemoria.setForeground(Color.green);
         lblMedMemoria.setForeground(Color.blue);
+        pgbMemoria.setValue(memorianumero);
+        pgbMemoria.setStringPainted(true);
         
         if(memorianumero > numeromaxmemoria){
             numeromaxmemoria = memorianumero;
